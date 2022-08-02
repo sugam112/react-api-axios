@@ -1,0 +1,25 @@
+.container-for-separator {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Used to set the position of text */
+    position: relative;
+}
+
+.container__content {
+    /* We won't see the separator line */
+    background: #fff;
+
+    /* Displayed at the center of container */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container__separator {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+    width: 100%;
+}

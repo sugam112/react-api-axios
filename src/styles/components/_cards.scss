@@ -1,0 +1,30 @@
+.content-wrapper{
+    margin: auto;
+}
+.card-layout {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.cards-item {
+    background-color: orange;
+
+    /* There will be 4 cards per row */
+    flex-basis: 25%;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100%;
+    height: auto;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
