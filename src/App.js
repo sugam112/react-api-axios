@@ -10,6 +10,17 @@ import NoteToDev from "./components/NoteToDev";
 
 function App() {
   const [products, setProducts] = useState([]);
+
+  // const [isChecked, setIsChecked] = useState(false);
+
+  const handleOnChange = (e) => {
+    const { value, checked } = e.target;
+
+    console.log(`${value} is ${checked}`);
+    // setIsChecked(!isChecked);
+    // console.log(isChecked);
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -51,9 +62,16 @@ function App() {
       <NoteToDev />
       <Separator />
       <div className="content-wrapper card-layout">
+        {/* button for checkbox */}
         {products.map((item, index) => {
           return (
             <div className="cards-item" key={index}>
+              <input
+                type="checkbox"
+                name="products"
+                value={item.title}
+                onChange={handleOnChange}
+              ></input>
               <p>{item.title}</p>
               <p>{item.price}</p>
             </div>
